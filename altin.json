@@ -1,0 +1,20 @@
+[
+    {
+        "kodlar": {
+            "Oylama yaparsınız": {
+                "isim": "Oylama yaparsınız",
+                "id": "XTkXh5AGea",
+                "desc": "oylama yapın",
+                "modules": [
+                    "komutlar"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/613719402952523786/6ec091f71e2a6417e3dd9b42e308e36d.png",
+                "main_code": "yok main dosya mosya",
+                "komutlar_code": "const Discord = require('discord.js');\r\n\r\n exports.run = (client, message, args) => {\r\n   message.delete();\r\n\r\n   let question = args.join(' ');\r\n\r\n   let user = message.author.username\r\n\r\n   if (!question) return message.channel.sendEmbed(\r\n\r\n     new Discord.RichEmbed()\r\n\r\n     .addField(`:x: **Yazı Yazman Gerek** :x:`)).then(m => m.delete(5000));\r\n\r\n     console.log(\"oylama komutu \" + message.author.username + '#' + message.author.discriminator + \" tarafından kullanıldı.\")\r\n     message.channel.sendEmbed(\r\n\r\n       new Discord.RichEmbed()\r\n\r\n       .setColor(\"RED\")\r\n       .setThumbnail(client.user.avatarURL)\r\n       .setTimestamp()\r\n       .setFooter('Oylama Sistemi BUĞRA BOT', client.user.avatarURL)\r\n\r\n       .addField(`**Oylama**`, `**${question}**`)).then(function(message) {\r\n\r\n         message.react('✅');\r\n\r\n         message.react('❌');\r\n\r\n       });\r\n\r\n     };\r\n\r\n     exports.conf = {\r\n       enabled: true,\r\n       guildOnly: false,\r\n       aliases: ['oylama'],\r\n\r\n  permLevel: 2\r\n};\r\n\r\nexports.help = {\r\n  name: 'oylama',\r\n  description: 'Oylama yapmanızı sağlar.',\r\n  usage: 'oylama <oylamaismi>'\r\n};\r\n//buğrabot",
+                "kod_rank": "altin",
+                "k_adi": "ㄠ𝓁arghi",
+                "date": "9/18/2020"
+            }
+        }
+    }
+]

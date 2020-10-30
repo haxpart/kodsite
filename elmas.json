@@ -1,0 +1,20 @@
+[
+    {
+        "kodlar": {
+            "dmduyuru": {
+                "isim": "dmduyuru",
+                "id": "HGOXRMuwfA",
+                "desc": "dm mesaj atarsınız sunucuya",
+                "modules": [
+                    "komutlar"
+                ],
+                "icon": "https://cdn.discordapp.com/avatars/613719402952523786/6ec091f71e2a6417e3dd9b42e308e36d.png",
+                "main_code": "yok main dosya mosya sana ",
+                "komutlar_code": "const Discord = require('discord.js');\r\nconst ayarlar = require('../ayarlar.json');\r\n\r\nexports.run = (client, message, args) => {\r\n  let mesaj = args.slice(0).join(' ');\r\nif (mesaj.length < 1) return message.channel.send('Birşey Yazmalısınız');\r\n  message.delete();\r\n      const mesajat = new Discord.RichEmbed()\r\n      .setColor('RANDOM')\r\n      .setDescription('' + mesaj + '')\r\n\r\n      client.users.forEach(u => {\r\nu.sendEmbed(mesajat)\r\n})\r\n};\r\n\r\nexports.conf = {\r\n  enabled: true,\r\n  guildOnly: true,\r\n  aliases: ['dd','dmd','dm'],\r\n  permLevel: 4\r\n};\r\n\r\nexports.help = {\r\n  name: 'dmduyuru',\r\n  description: 'Tüm Herkese Mesaj Atar.',\r\n  usage: 'dmduyuru [duyurmak istediğiniz şey]'\r\n};\r\n//buğrabot",
+                "kod_rank": "elmas",
+                "k_adi": "ㄠ𝓁arghi",
+                "date": "9/18/2020"
+            }
+        }
+    }
+]
